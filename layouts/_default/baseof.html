@@ -4,8 +4,18 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    {{/* To get build to work, just remove either the CSS here or module mount in config.toml and the reference below (*/}}
-
+{{/* 
+    ## To get build to work either:
+    #1. Remove module mount and reference in baseof
+    #2. Remove the CSS section in baseof.html
+    #3. Update this to reference a specific file
+*/}}
+    
+    {{- $css := resources.Get "css/tailwind.css" -}}
+    {{- $processedcss := ($css | postCSS (dict "config" "./assets/css/postcss/postcss.config.js" "inlineImports" true) ) -}}
+    <link rel="stylesheet" href="{{ $processedcss.RelPermalink }}">
+        
+        
     {{- $lazysizes := resources.Get "npmplugins/lazysizes/lazysizes.js" -}}
     <script async src="{{ $lazysizes.RelPermalink }}"></script>
     

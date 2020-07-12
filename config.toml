@@ -11,6 +11,3 @@ title = "Test for Hugo modules"
   [[module.mounts]]
     source = "./node_modules/lazysizes"
     target = "assets/npmplugins/lazysizes"
-
-[build]
-  writeStats = true
