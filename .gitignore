@@ -1,0 +1,16 @@
+.netlify
+/.idea
+public
+resources/
+hugo_stats.json
+/hugo_stats.json
+.cache
+.local
+Thumbs.db
+.DS_Store
+.dist
+.tmp
+.sass-cache
+npm-debug.log
+node_modules/
+

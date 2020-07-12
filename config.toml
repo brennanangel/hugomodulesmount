@@ -1,0 +1,11 @@
+
+title = "Test for Hugo modules"
+
+[module]
+  [[module.mounts]]
+    source = "./node_modules/lazysizes"
+    target = "assets/npmplugins/lazysizes"
+
+# Grabs all of the used CSS classes into hugo_stats.json after build so PostCSS can use PurgeCSS
+[build]
+  writeStats = true

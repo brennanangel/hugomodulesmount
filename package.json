@@ -1,0 +1,28 @@
+{
+    "name": "hugo-tailwind-hugo-modules",
+    "version": "0.1.1",
+    "description": "demo theme for hugo modules test",
+    "scripts": {
+        "start": "hugo server --gc"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^2.2.0",
+        "autoprefixer": "^9.8.0",
+        "cssnano": "^4.1.10",
+        "postcss": "^7.0.32",
+        "postcss-browser-reporter": "^0.6.0",
+        "postcss-cli": "^7.1.1",
+        "postcss-import": "^12.0.1",
+        "postcss-pxtorem": "^5.1.1",
+        "tailwindcss": "^1.4.6"
+    },
+    "browserslist": [
+        "last 1 version",
+        "> 1%",
+        "maintained node versions",
+        "not dead"
+    ],
+    "dependencies": {
+        "lazysizes": "^5.2.2"
+    }
+}

@@ -1,0 +1,14 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{{- $css := resources.Get "css/tailwind.css" -}}
+{{- $processedcss := ($css | postCSS (dict "config" "./assets/css/postcss/postcss.config.js" "inlineImports" true) ) -}}
+<link rel="stylesheet" href="{{ $processedcss.RelPermalink }}">
+    
+    
+{{- $lazysizes := resources.Get "npmplugins/lazysizes/lazysizes.js" -}}
+<script async src="{{ $lazysizes.RelPermalink }}"></script>
+
+
+</head>
