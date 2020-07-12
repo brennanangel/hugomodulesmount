@@ -5,7 +5,6 @@ title = "Test for Hugo modules"
 ## To get build to work either:
 #1. Remove module mount and reference in baseof
 #2. Remove the CSS section in baseof.html
-#3. Update this to reference a specific file
 
 [module]
   [[module.mounts]]
