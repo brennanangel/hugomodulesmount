@@ -2,9 +2,6 @@
     "name": "hugo-tailwind-hugo-modules",
     "version": "0.1.1",
     "description": "demo theme for hugo modules test",
-    "scripts": {
-        "start": "hugo server --gc"
-    },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^2.2.0",
         "autoprefixer": "^9.8.0",

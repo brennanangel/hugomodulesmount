@@ -1,8 +1,18 @@
 <!DOCTYPE html>
-<html lang='{{ .Site.LanguageCode }}'>
-    {{ partial "head" . }}
-    <body class="flex flex-col min-h-screen">
-        <main class="flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    {{/* To get build to work, just remove either the CSS here or module mount in config.toml and the reference below (*/}}
+
+    {{- $lazysizes := resources.Get "npmplugins/lazysizes/lazysizes.js" -}}
+    <script async src="{{ $lazysizes.RelPermalink }}"></script>
+    
+    
+    </head>
+    <body>
+        <main>
             {{- block "main" . }}{{- end }}
         </main>
     </body>
